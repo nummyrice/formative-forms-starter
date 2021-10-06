@@ -7,14 +7,19 @@
     "start": "nodemon index.js",
     "debug": "nodemon --inspect index.js",
     "test": "PORT=3001 mocha test --exit",
-    "test-with-json": "PORT=3001 mocha test --reporter json --exit"
+    "test-with-json": "PORT=3001 mocha test --reporter json --exit",
+    "test1": "PORT=3001 mocha --timeout 5000 test/01_home.test.js --exit",
+    "test2": "PORT=3001 mocha --timeout 5000 test/02_create_form.test.js --exit",
+    "test3": "PORT=3001 mocha --timeout 5000 test/03_form_submit.test.js --exit",
+    "test4": "PORT=3001 mocha --timeout 5000 test/04_create_interesting_form.test.js --exit",
+    "test5": "PORT=3001 mocha --timeout 5000 test/05_interesting_form_submit.test.js --exit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^2.0.4"
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
