@@ -1,0 +1,23 @@
+extends layout.pug
+
+block content
+    form(action="/create" method='post')
+        input(type="hidden" name='_csrf' value=csrfToken)
+        label(for="firstName") First Name:
+        input(type="text" name='firstName')
+        label(for="lastName") Last Name:
+        input(type="text" name='lastName')
+        label(for="email") Email:
+        input(type="email" name='email')
+        label(for="age") Age:
+        input(type="text" name='age')
+        label(for="password") Password:
+        input(type="password" name='password')
+        label(for="confirmedPassword") Confirmed Password:
+        input(type="password" name='confirmedPassword')
+        //- label(for="submit")
+        input(type="submit" name='submit' value="Create User")
+        //- button Submit
+
+
+//-  PHASE 2

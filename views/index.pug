@@ -1,26 +1,27 @@
 extends layout.pug
 
 block content
-    body
-        a(href='/') Home
-        br
-        a(href='/create') Create
-        br
-        a(href='/create-interesting') Create Interesting
-        br
-        table
-            h2 Existing Users
-            th id
-            th First Name
-            th Last Name
-            th Email
-            th Age
-            th Favorite Beatle
-            th Likes Ice Cream
-                td= id
-                td= firstName
-                td= lastName
-                td= email
-                td= age
-                td= favoriteBeatle
-                td= likesIceCream
+    h2 Existing Users
+    table
+        thead
+            tr
+                th id
+                th First Name
+                th Last Name
+                th Email
+                th Age
+                th Favorite Beatle
+                th Likes Ice Cream
+
+        tbody
+            each user in users
+                tr
+                    td= user.id
+                    td= user.firstName
+                    td= user.lastName
+                    td= user.email
+                    td= user.age
+                    td= user.favoriteBeatle
+                    td= user.iceCream
+
+//- each user in users  ----- foreach. looping
